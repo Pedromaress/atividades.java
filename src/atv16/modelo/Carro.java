@@ -8,6 +8,7 @@ public class Carro extends Veiculo{
     }
     @Override
     public double calcularAluguel(int dias){
+        // 50 é uma taxa obrigatoria de limpeza
         return (valorDiaria * dias) + 50.0;
     }
 }

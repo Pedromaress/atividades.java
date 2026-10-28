@@ -9,10 +9,11 @@ public class Moto extends Veiculo{
 
     @Override
     public double calcularAluguel(int dias){
+        //valorDiaria*dias
         if(dias > 5){
-            return valorDiaria = valorDiaria - (valorDiaria*0.10);
+            return valorDiaria = (valorDiaria - (valorDiaria*0.10) * dias);
         }
 
-        return valorDiaria;
+        return (valorDiaria * dias);
     }
 }
