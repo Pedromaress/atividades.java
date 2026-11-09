@@ -7,6 +7,10 @@ public class Moto extends Veiculo{
         this.cilindradas = cilindradas;
     }
 
+    public int getCilindradas() {
+        return cilindradas;
+    }
+
     @Override
     public double calcularAluguel(int dias){
         //valorDiaria*dias

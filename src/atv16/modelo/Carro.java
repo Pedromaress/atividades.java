@@ -6,6 +6,11 @@ public class Carro extends Veiculo{
         super(placa, modelo, valorDiaria);
         this.numeroPortas = numeroPortas;
     }
+
+    public int getNumeroPortas() {
+        return numeroPortas;
+    }
+
     @Override
     public double calcularAluguel(int dias){
         // 50 é uma taxa obrigatoria de limpeza

@@ -5,10 +5,12 @@ import atv16.modelo.Moto;
 import atv16.modelo.Veiculo;
 import atv16.Servico.GerenciadorFrota;
 import atv16.excecao.VeiculoNaoEncontradoException;
-import java.util.Scanner;
 
+import java.io.IOException;
+import java.util.Scanner;
+import atv16.Servico.GravadorDeFrota;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Scanner scan = new Scanner(System.in);
         GerenciadorFrota frota = new GerenciadorFrota();
@@ -26,7 +28,8 @@ public class Main {
                     "2 - Listar Frota \n" +
                     "3 - Simualr aluguel por placa \n" +
                     "4 - Remover Veiculo por Placa \n" +
-                    "5 - Sair");
+                    "5 - Salvar Frota em Disco \n" +
+                    "6 - Sair");
             opcao = scan.nextInt();
             //apenas pra quebrar o enter para os proximos scans
             scan.nextLine();
@@ -37,6 +40,7 @@ public class Main {
                     try {
                         System.out.println("Qual Veiculo Deseja Cadastrar? (1- carro  2- moto)");
                         tpVeiculo = scan.nextInt();
+                        //esse scan abaixo é somente pra tirar o "enter" que fica após o scan de cima
                         scan.nextLine();
 
                         System.out.println("Digite a placa:");
@@ -47,7 +51,7 @@ public class Main {
                         SvalorDiaria = scan.nextDouble();
                         Veiculo veiculo;
 
-                        // verificaçao das especificações de cada tipo de veiculo
+                        // verificaçao das especificações de cada tipo de veiculo( carros ou motos)
                         if (tpVeiculo == 1) {
                             System.out.println("Digite o numero de portas:");
                             int numeroDePortas = scan.nextInt();
@@ -132,14 +136,17 @@ public class Main {
                     }
                     break;
                 case 5:
+                    GravadorDeFrota.exportarFrota(frota.listarTodos());
+                    break;
+                case 6:
                     break;
                 default:
-                    if (opcao != 5) {
+                    if (opcao != 6) {
                         System.out.println("Opção inválida! Tente novamente.");
                     }
                     break;
             }
 
-        }while(opcao != 5);
+        }while(opcao != 6);
     }
 }
