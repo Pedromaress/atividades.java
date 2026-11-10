@@ -3,7 +3,7 @@ package atv16.app;
 import atv16.modelo.Carro;
 import atv16.modelo.Moto;
 import atv16.modelo.Veiculo;
-import atv16.Servico.GerenciadorFrota;
+import atv16.Servico.GerenciadorSerializacao;
 import atv16.excecao.VeiculoNaoEncontradoException;
 
 import java.io.IOException;
