@@ -43,15 +43,4 @@ src/
 - Serialização de objetos
 - Menus no console com `Scanner`
 
-## ▶️ Como rodar
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Pedromaress/atividades.java.git
-   ```
-2. Abra a pasta no IntelliJ IDEA
-3. Vá até a pasta da atividade que quiser ver e rode a classe `Main`
-
-## 👤 Autor
-
-Feito por [@Pedromaress](https://github.com/Pedromaress) 🚀
