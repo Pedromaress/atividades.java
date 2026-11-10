@@ -14,7 +14,7 @@ Atividades e estudos de Java da matéria de **Programação Orientada a Objetos*
 
 ## 📚 Sobre
 
-Esse repositório é onde eu guardo as atividades que a matéria de POO manda no curso de Ciência da Computação (IFNMG). Além das atividades, também deixo aqui alguns estudos extras que faço por conta própria, tudo em Java.
+Esse repositório é onde reúno todas as atividades que resolvo na matéria de Programação Orientada a Objetos (POO) do curso de Ciência da Computação, cada uma na sua pasta e pronta para rodar. Além das atividades, também deixo aqui alguns estudos extras que faço por conta própria, tudo em Java.
 
 ## 🗂️ Organização
 
