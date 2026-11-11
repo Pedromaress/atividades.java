@@ -5,7 +5,7 @@ import atv16.modelo.Moto;
 import atv16.modelo.Veiculo;
 import atv16.Servico.GerenciadorSerializacao;
 import atv16.excecao.VeiculoNaoEncontradoException;
-
+import atv16.Servico.GerenciadorFrota;
 import java.io.IOException;
 import java.util.Scanner;
 import atv16.Servico.GravadorDeFrota;
@@ -14,6 +14,11 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         GerenciadorFrota frota = new GerenciadorFrota();
+
+        //carrega os veiculos salvos no .dat assim que o programa abre
+        for (Veiculo v : GerenciadorSerializacao.carregarFrota()) {
+            frota.adicionar(v);
+        }
 
         int opcao;
         String Splaca;
@@ -29,7 +34,8 @@ public class Main {
                     "3 - Simualr aluguel por placa \n" +
                     "4 - Remover Veiculo por Placa \n" +
                     "5 - Salvar Frota em Disco \n" +
-                    "6 - Sair");
+                    "6 - Salvar Alterações em Disco \n" +
+                    "7 - Sair");
             opcao = scan.nextInt();
             //apenas pra quebrar o enter para os proximos scans
             scan.nextLine();
@@ -139,14 +145,15 @@ public class Main {
                     GravadorDeFrota.exportarFrota(frota.listarTodos());
                     break;
                 case 6:
+                    GerenciadorSerializacao.salvarFrota(frota.listarTodos());
+                    break;
+                case 7:
                     break;
                 default:
-                    if (opcao != 6) {
-                        System.out.println("Opção inválida! Tente novamente.");
-                    }
+                    System.out.println("Opção inválida! Tente novamente.");
                     break;
             }
 
-        }while(opcao != 6);
+        }while(opcao != 7);
     }
 }
