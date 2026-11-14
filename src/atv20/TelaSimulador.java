@@ -73,7 +73,7 @@ public class TelaSimulador extends JFrame {
                     //esse comando "JOptionPane.showMessageDialog" é para aprecer uma outra telinha com oq desejar, tipo aviso ou outra coisa...
                     JOptionPane.showMessageDialog(null,
                             "Quantidade de dias: " + dias +
-                                    "\nValor da diária: R$ 100,00" +
+                                    "\nValor total da diária: R$ 100,00" +
                                     "\nValor total: R$ " + valorTotal);
 
                 //catch caso oq o usuário tenha escrito não for número
